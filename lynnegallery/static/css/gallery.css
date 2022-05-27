@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+h1 {
+    color: rgb(97, 7, 92);
+    font-family: 'pacifico', cursive;
+}
+
+h3 {
+    color: rgb(97, 7, 92);
+    font-family: 'pacifico', cursive;
+}
+
+header {
+    background: linear-gradient(180deg, rgb(255, 255, 255), rgb(120, 79, 185));
+    font-size: 25px;
+    padding: 15% 10%;
+    margin-top: 3%;
+}
+
+header h1 span {
+    color: rgb(75, 35, 112);
+    font-family: "Pacifico", cursive;
+    font-size: 90px;
+    padding-left: 25%;
+    padding-right: 10px;
+}
+
+header h1 span:hover {
+    color: rgb(233, 8, 83);
+}
+
+footer .svg-inline--fa {
+    color: salmon;
+    font-size: 65px;
+}
+
+footer .svg-inline--fa:hover {
+    color: #3c778a;
+}
+
+#pictures {
+    float: left;
+    margin-left: 2%;
+}
+
+#indexpictures {
+    float: left;
+    margin-left: 6%;
+}
+
+#picbtn {
+    background-color: rgb(99, 63, 133);
+}
