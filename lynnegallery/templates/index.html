@@ -1,0 +1,64 @@
+{%extends 'base.html'%} {% block content %}
+<div class="container">
+    <header>
+        <h1><span>lynne gallery</span></h1>
+
+    </header>
+</div>
+
+
+<script>
+    function CopyFunction() {
+        var copyText = document.getElementById("imagelink");
+        copyText.select();
+        document.execCommand("copy");
+        alert("Copied the text: " + copyText.value);
+    }
+</script>
+
+
+
+<div class="container">
+    <div class="row" id="pictures" style="margin-bottom: 3%;">
+        {% for picture in all_pictures %}
+        <div class="col-md-4 shadow" style="float:left;margin-top:2%;height:400px;width: 400px; margin-left: 10px; ">
+            <img src="{{picture.picture_image.url}} " class="img-responsive " alt=" " style="height: 80%;width: 95%; ">
+            <div class="text-center ">
+                <h6 class="colored-font ">{{picture.picture_name}}</h6>
+
+
+
+
+                <i href="# " class="fa fa-download " aria-hidden="true " Style="color:white; ">Download:{{ picture.download }}</i>
+                <br>
+
+                <input type="text " id="imagelink " class="form-control input-sm " value="https://lynnegallery.herokuapp.com{{picture.picture_image.url}} " class="hidden " style="display:none; ">
+                <button class="fancybox btn btn-primary btn-sm " id="picbtn" onclick="CopyFunction() ">
+                        <i class="fa fa-copy " style="color: #d6962c "></i> Copy Link
+                    </button>
+                <a class="fancybox btn btn-primary btn-sm " id="picbtn" el="gallery " href="{{picture.picture_image.url}} "><i  style="color:#d6962c " class="fa fa-eye "></i> View Image</a>
+
+                <p class="colored-font ">{{ picture.picture_download }}</p>
+
+            </div>
+
+        </div>
+        {%endfor%}
+    </div>
+</div>
+<div class="container">
+
+
+    <footer class="contact container " id="contact ">
+        <h2 align="center ">Contact</h2>
+
+        <div class="social " align="center ">
+            <a href="https://www.linkedin.com/in/linetlucygenchabe/ "> <img src="static/images/linkedin (1).png " alt="linkedin " height="40px " width="40px "></a>
+            <a href="https://github.com/linetlucy-genchabe "><img src="/static/images/github (1).png " alt="github " height="40px " width="40px "></a>
+            <img src="/static/images/twitter (1).png " alt="twitter " height="40px " width="40px ">
+            <a href="https://www.instagram.com/_l.y.n.n.e/ "><img src="/static/images/instagram (1).png " alt="instagram " height="40px " width="40px "></a>
+
+        </div>
+    </footer>
+</div>
+{% endblock %}
