@@ -5,6 +5,8 @@ from .models import Pictures, Category,Location
 
 # Create your views here.
 
+def about(request):
+    return render(request,'about.html')
 
 def pictures(request):
     try:
@@ -22,12 +24,12 @@ def index(request):
 
 def search_results(request):
 
-    if 'picture' in request.GET and request.GET["picture"]:
-        search_term = request.GET.get("picture")
+    if 'searchItem' in request.GET and request.GET["searchItem"]:
+        search_term = request.GET.get("searchItem")
         searched_pictures = Pictures.search_by_category(search_term)
         message = f"{search_term}"
 
-        return render(request, 'search.html',{"message":message,"picture": searched_pictures})
+        return render(request, 'search.html',{"message":message,"all_pictures": searched_pictures})
 
     else:
         message = "You haven't searched for any term"
