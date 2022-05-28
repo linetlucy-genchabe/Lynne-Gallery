@@ -19,4 +19,13 @@
         {% endfor %} {% endif %}
     </div>
 </div>
-{% endblock %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="row">
+            {% if all_pictures%} {% else %}
+            <h2> No Search categories found {{message}}</h2>
+            {% endif %}
+
+        </div>
+    </div>
+    {% endblock %}
