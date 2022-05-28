@@ -28,6 +28,14 @@ header h1 span:hover {
     color: rgb(233, 8, 83);
 }
 
+.about {
+    background: linear-gradient(rgb(247, 245, 245), rgb(94, 20, 100)), url("../assets/stars.png");
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 2%;
+    padding-bottom: 3%;
+}
+
 footer .svg-inline--fa {
     color: salmon;
     font-size: 65px;
