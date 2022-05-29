@@ -44,8 +44,8 @@ class Pictures(models.Model):
     name = models.CharField(max_length =50)
     description = models.CharField(max_length=500)
     picture_image = models.ImageField(upload_to = 'gallery/')
-    location = models.ForeignKey(Location, on_delete=models.CASCADE)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    pic_location = models.ForeignKey(Location, on_delete=models.CASCADE)
+    pic_category = models.ForeignKey(Category, on_delete=models.CASCADE)
     editor = models.ForeignKey(Editor,on_delete=models.CASCADE)
     date_posted = models.DateTimeField(auto_now_add=True)
 
@@ -54,7 +54,7 @@ class Pictures(models.Model):
 
     @classmethod
     def search_by_category(cls,search_term):
-        search_result = cls.objects.filter(category__icontains=search_term)
+        search_result = cls.objects.filter(pic_category__category_name__icontains=search_term)
         return search_result
 
     @classmethod
@@ -76,7 +76,7 @@ class Pictures(models.Model):
 
     @classmethod
     def filter_by_location(cls,location):
-        filtered_result = cls.objects.filter(location__icontains=location)
+        filtered_result = cls.objects.filter(pic_location__location_name__icontains=location)
         return filtered_result
 
 
