@@ -22,7 +22,7 @@
     <div class="row" id="pictures" style="margin-bottom: 3%;">
         {% for picture in all_pictures %}
         <div class="col-md-4 shadow" style="float:left;margin-top:2%;height:400px;width: 400px; margin-left: 10px; ">
-            <img src="{{picture.picture_image.url}} " class="img-responsive " alt=" " style="height: 80%;width: 95%; ">
+            <a href="/pictures"><img src="{{picture.picture_image.url}} " class="img-responsive " alt=" " style="height: 80%;width: 95%; "></a>
             <div class="text-center ">
                 <h6 class="colored-font ">{{picture.picture_name}}</h6>
 
