@@ -37,11 +37,11 @@ def search_results(request):
 def get_category(request,category):
     category_results = Category.objects.all()
     location_results = Location.objects.all()
-    category_result = Pictures.objects.filter(category = category)
+    category_result = Pictures.objects.filter(pic_category__category_name = category)
     return render(request,'index.html',{'all_pictures':category_result,'category_results':category_results,'location_results':location_results})
 
 def get_location(request,location):
     category_results = Category.objects.all()
     location_results = Location.objects.all()
-    location_result = Pictures.objects.filter(location= location)
+    location_result = Pictures.objects.filter(pic_location__location_name= location)
     return render(request,'index.html',{'all_pictures':location_result,'category_results':category_results,'location_results':location_results})
