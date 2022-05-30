@@ -1,81 +1,94 @@
-# Project Title
+# Lynne's Gallery
 
-One Paragraph of project description goes here
+## Description
+Personal gallery application that you display your photos for others to see.
 
-## Getting Started
+## User Stories
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+User Can :-
+
+* View different photos that interest me.
+* Click on a single photo to expand it and also view the details of the photo. The photo details must appear on a modal within the same route as the main page.
+* Search for different categories of photos. (ie. Travel, Food)
+* Copy a link to the photo to share with my friends.
+* View photos based on the location they were taken.
+
+Home page
+
+![Home](./lynnegallery/static/images/home.png)
+
+## Behaviour Driven Development
+| Behaviour | Input | Output |
+| :---------------- | :---------------: | ------------------: |
+| Application starts | **On page load** | see a search bar and some sample images |
+| Search| **images** | Redirects to images page where you can view image details |
+| Image click | **Image click** | redirects to images page where you can view full details of the image|
+| click on copy  link | **Button click** | Copies image link that can be shared with others|
+| view image button | **button click** | displays the full image|
+
+
+## Installation Requirements
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+- Django
+- Pip & Python
+- Pillow 
+- Postgres Database
 
+## Instructions
+
+To use this gallery project .......  
+  
+##### Clone Repository:  
+ ```bash 
+https://github.com/linetlucy-genchabe/Lynne-Gallery.git 
 ```
-Give examples
+##### Install and activate Virtual Environment virtual  
+ ```bash 
+cd tribune && python3 -m venv virtual && source virtual/bin/activate 
+```  
+##### Install Dependencies  
+ ```bash 
+ pip install -r requirements.txt 
+```  
+##### Setup Database  
+  SetUp Database User,Password, Host then following Command  
+ ```bash 
+python manage.py makemigrations news 
+ ``` 
+ Now Migrate  
+ ```bash 
+ python manage.py migrate 
 ```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
+##### Run Application  
+ ```bash 
+ python3 manage.py runserver 
+ 
 ```
-Give the example
+##### Test Application  
+ ```bash 
+ python manage.py test news
 ```
+Open the application on your browser `127.0.0.1:8000`.  
 
-And repeat
 
-```
-until finished
-```
 
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+## Technologies Used
+* python
+* html5
+* Django
+* Postgres
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+MIT LICENSE
+
+## Live Site
+
+#### https://lynnegallery.herokuapp.com/
+ 
+
+<p align = "center">
+    &copy; 2022 @linetlucy genchabe.
+</p>
