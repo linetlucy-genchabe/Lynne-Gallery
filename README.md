@@ -55,7 +55,7 @@ cd tribune && python3 -m venv virtual && source virtual/bin/activate
 ##### Setup Database  
   SetUp Database User,Password, Host then following Command  
  ```bash 
-python manage.py makemigrations news 
+python manage.py makemigrations lynnegallery
  ``` 
  Now Migrate  
  ```bash 
@@ -68,7 +68,7 @@ python manage.py makemigrations news
 ```
 ##### Test Application  
  ```bash 
- python manage.py test news
+ python manage.py test lynnegallery
 ```
 Open the application on your browser `127.0.0.1:8000`.  
 
